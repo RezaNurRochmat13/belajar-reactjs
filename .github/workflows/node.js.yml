@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Setup project before build
-    - run: npm install
+      run: npm install
   
   build:
     runs-on: ubuntu-latest
@@ -36,7 +36,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Building the project first
-    - run: npm run build --if-present
+      run: npm run build --if-present
   
   deploy:
     runs-on: ubuntu-latest
@@ -50,10 +50,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install package Vercel CLI
-    - run: npm install --global vercel@latest
+      run: npm install --global vercel@latest
     - name: Pull Vercel Env Information
-    - run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
     - name: Build project before deploy to Vercel
-    - run: vercel build  --prod --token=${{ secrets.VERCEL_TOKEN }}
+      run: vercel build  --prod --token=${{ secrets.VERCEL_TOKEN }}
     - name: Deploy project to Vercel
-    - run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+      run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
