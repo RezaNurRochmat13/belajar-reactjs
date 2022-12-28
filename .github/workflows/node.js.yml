@@ -35,6 +35,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Install package
+      run: npm install --silent
     - name: Building the project first
       run: npm run build --if-present
   
