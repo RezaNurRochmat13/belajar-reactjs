@@ -54,7 +54,7 @@ function App({ appState, addNewTask, removeLastTask, debugConsoleState }: Action
     <div className="App">
       <Header />
       <Content />
-      {/* <Router>
+      <Router>
          <Routes>
             <Route path='/login' element={<Login />} />
             <Route path='/contact' element={<Contact />} />
@@ -62,7 +62,7 @@ function App({ appState, addNewTask, removeLastTask, debugConsoleState }: Action
             <Route path='/user' element={<User />} />
             <Route path='/' element={<OAuth />} />
          </Routes>
-      </Router> */}
+      </Router> 
       <button onClick={() => handleAddTask()}>Add Task to State</button>
       <button onClick={() => handleRemoveTask()}>Remove Task from State</button>
       <button onClick={() => handleDebugConsoleState()}>Debug Console State</button>
