@@ -50,6 +50,18 @@ function App({ appState, addNewTask, removeLastTask, debugConsoleState }: Action
     console.log("Test conflict");
   }, []);
 
+  useEffect(() => {
+    console.log('STATE COMP :', appState);
+  }, [appState]);
+
+  useEffect(() => {
+    console.log('STATE COMP :', appState);
+  }, [appState]);
+
+  useEffect(() => {
+    console.log('STATE COMP :', appState);
+  }, [appState]);
+
   return (
     <div className="App">
       <Header />
