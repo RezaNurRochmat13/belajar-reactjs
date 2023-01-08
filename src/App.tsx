@@ -41,6 +41,10 @@ function App({ appState, addNewTask, removeLastTask, debugConsoleState }: Action
   useEffect(() => {
     console.log("Test conflict");
   }, []);
+  
+  useEffect(() => {
+    console.log("Test conflict");
+  }, []);
 
   return (
     <div className="App">
