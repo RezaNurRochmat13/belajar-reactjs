@@ -37,6 +37,18 @@ function App({ appState, addNewTask, removeLastTask, debugConsoleState }: Action
   useEffect(() => {
     console.log('STATE COMP :', appState);
   }, [appState]);
+  
+  useEffect(() => {
+    console.log("Test conflict");
+  }, []);
+  
+  useEffect(() => {
+    console.log("Test conflict");
+  }, []);
+  
+  useEffect(() => {
+    console.log("Test conflict");
+  }, []);
 
   useEffect(() => {
     console.log('STATE COMP :', appState);
